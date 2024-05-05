@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("org.jetbrains.kotlin.kapt")
+    id ("androidx.navigation.safeargs")
 }
 
 android {
@@ -61,6 +62,10 @@ dependencies {
     kapt("com.squareup.moshi:moshi-kotlin-codegen:1.15.1")
     implementation("com.squareup.retrofit2:converter-moshi:2.11.0")
     implementation("io.coil-kt:coil:2.0.0-rc02")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    implementation("com.github.bumptech.glide:glide:4.13.2")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.13.2")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
